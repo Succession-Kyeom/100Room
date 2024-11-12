@@ -1,10 +1,10 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
-    [SerializeField] float speed = 5f; //속도 계수
-    [SerializeField] float mouseSpeed = 1f; //회전 계수
+    [SerializeField] float speed = 5.0f; //속도 계수
+    [SerializeField] float mouseSpeed = 3.0f; //좌우 회전값
     private float gravity;
     private float jump;
     private float mouseX;
