@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
-    [SerializeField] float speed = 5.0f; //속도 계수
-    [SerializeField] float mouseSpeed = 3.0f; //좌우 회전값
+    [SerializeField] float speed = 5f; //속도 계수
+    [SerializeField] float mouseSpeed = 5f; //회전 계수
     private float gravity;
     private float jump;
     private float mouseX;
@@ -47,5 +47,13 @@ public class PlayerMove : MonoBehaviour {
         }
 
         controller.Move(move * Time.deltaTime * speed);
+    }
+
+    void OnTriggerEnter(Collider room)
+    {
+        RoomController roomController = room.GetComponent<RoomController>();
+
+        roomController.CheckTheRoom();
+
     }
 }
