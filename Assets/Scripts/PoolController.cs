@@ -18,7 +18,7 @@ public class PoolController : MonoBehaviour {
             isActioned = true;
         }
 
-        if(!isActioned) {
+        if(isActioned) {
             while(this.transform.position.y > -3.0f) {
                 this.transform.position -= new Vector3(0, 0.08f, 0) * Time.deltaTime;
             }

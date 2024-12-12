@@ -15,7 +15,7 @@ public class RightController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if(hit) {
+        if(!hit) {
             color.color = Color.red;
         }
         else {
